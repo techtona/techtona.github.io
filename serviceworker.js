@@ -6,7 +6,8 @@ var urlsToCache = [
     '/js/jquery.min.js',
     '/css/main.css',
     '/images/ugm.png',
-    '/manifest.json'
+    '/manifest.json',
+    '/fallback.json'
 ];
 
 // install cache on browser

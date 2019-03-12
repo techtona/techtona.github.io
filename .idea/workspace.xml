@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc24cc93-0c63-47ff-8ce5-caeb5f498803" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/images/icons/icon-128x128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/icons/icon-144x144.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/icons/icon-152x152.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/icons/icon-192x192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/icons/icon-384x384.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/icons/icon-512x512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/icons/icon-72x72.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/icons/icon-96x96.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serviceworker.js" beforeDir="false" afterPath="$PROJECT_DIR$/serviceworker.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,11 +15,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="162">
               <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/serviceworker.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -49,10 +48,10 @@
       <list>
         <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/now.json" />
-        <option value="$PROJECT_DIR$/serviceworker.js" />
         <option value="$PROJECT_DIR$/fallback.json" />
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/serviceworker.js" />
       </list>
     </option>
   </component>
@@ -136,12 +135,12 @@
       <workItem from="1552277492354" duration="5371000" />
       <workItem from="1552346959834" duration="1875000" />
       <workItem from="1552353469567" duration="529000" />
-      <workItem from="1552357213767" duration="1996000" />
+      <workItem from="1552357213767" duration="2215000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27014000" />
+    <option name="totallyTimeSpent" value="27233000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1040" height="744" extended-state="6" />
@@ -159,7 +158,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.7414075" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3878887" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -183,13 +182,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/serviceworker.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="38" column="3" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -252,6 +244,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serviceworker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
         </state>
       </provider>
     </entry>
