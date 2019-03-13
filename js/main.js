@@ -50,7 +50,7 @@ $(document).ready(function () {
         if (!response) throw Error("no data on cache")
         return response.json();
     }).then(function (data) {
-        if (!networkDataReceive){
+        if (!networkDataReceive) {
             renderPage(data);
             console.log("render from cache");
         }
@@ -69,31 +69,72 @@ $(document).ready(function () {
         var _url2 = _url;
 
         // cek opsi yang dipilih
-        if (opt !== 'semua'){
-            _url2 = _url + '?gender='+opt;
+        if (opt !== 'semua') {
+            _url2 = _url + '?gender=' + opt;
         }
 
-        $.get(_url2,function (data) {
+        $.get(_url2, function (data) {
             $.each(data, function (key, items) {
                 _gend = items.gender;
 
                 result += '<div>' +
-                    '<h3>'+items.name+'</h3>' +
-                    '<p>'+_gend+'</p>' +
+                    '<h3>' + items.name + '</h3>' +
+                    '<p>' + _gend + '</p>' +
                     '</div>';
             });
 
             $('#mhs-list').html(result);
         });
     }
-});
 
-if ('serviceWorker' in navigator){
+    // notification
+    Notification.requestPermission(function (status) {
+        console.log('Notif permision status', status);
+    });
+
+    function displayNotification(title, msg, url, img) {
+        if (Notification.permission === 'granted') {
+            navigator.serviceWorker.getRegistration()
+                .then(function (reg) {
+                    var options = {
+                        body: msg,
+                        icon: img,
+                        vibrate: [100, 50, 100],
+                        data: {
+                            dateOfArrival: Date.now(),
+                            primaryKey: 1,
+                            url : url
+                        },
+
+                        actions: [
+                            {
+                                action: 'explore', title: 'Kunjungi Situs',
+                                icon: 'images/centang.png'
+                            },
+                            {
+                                action: 'close', title: 'Close Notification',
+                                icon: 'images/times.png'
+                            }
+                        ]
+                    };
+                    reg.showNotification(title, options)
+                })
+        }
+    }
+
+    $("#show-notification").on('click', function () {
+        console.log('click button');
+        displayNotification("Lorem Ipsum","Sit Dolor Amet",'https://google.com/','images/ugm.png');
+    });
+
+}); // tutup ready function
+
+if ('serviceWorker' in navigator) {
     window.addEventListener('load', function () {
         navigator.serviceWorker.register('/serviceworker.js').then(
             function (reg) {
                 // registerasi service worker berhasil
-                console.log('SW registration success, scope :',reg.scope);
+                console.log('SW registration success, scope :', reg.scope);
             }, function (err) {
                 // reg failed
                 console.log('SW registration faild : ', err);

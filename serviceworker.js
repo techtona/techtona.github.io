@@ -83,3 +83,25 @@ self.addEventListener('fetch', function (event) {
     //     })
     // )
 });
+
+self.addEventListener('notificationclose', function (n) {
+    var notification = n.notification;
+    var primaryKey = notification.data.primaryKey;
+
+    console.log('Closed Notification : ' + primaryKey);
+});
+
+self.addEventListener('notificationclick', function (n) {
+   var notification = n.notification;
+   var primaryKey = notification.data.primaryKey;
+   var action = n.action;
+   var url = notification.data.url;
+
+   console.log('Notification : ' , url);
+   if (action === 'close'){
+       notification.close();
+   } else{
+       clients.openWindow(url);
+       notification.close();
+   }
+});
