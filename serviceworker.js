@@ -84,13 +84,6 @@ self.addEventListener('fetch', function (event) {
     // )
 });
 
-self.addEventListener('notificationclose', function (n) {
-    var notification = n.notification;
-    var primaryKey = notification.data.primaryKey;
-
-    console.log('Closed Notification : ' + primaryKey);
-});
-
 self.addEventListener('notificationclick', function (n) {
    var notification = n.notification;
    var primaryKey = notification.data.primaryKey;
@@ -104,4 +97,10 @@ self.addEventListener('notificationclick', function (n) {
        clients.openWindow(url);
        notification.close();
    }
+});
+
+self.addEventListener('sync', function(event) {
+    if (event.tag === 'myFirstSync') {
+        event.waitUntil();
+    }
 });

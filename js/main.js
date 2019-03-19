@@ -139,6 +139,6 @@ if ('serviceWorker' in navigator) {
                 // reg failed
                 console.log('SW registration faild : ', err);
             }
-        )
+        );
     })
 }
